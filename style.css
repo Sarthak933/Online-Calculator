@@ -1,0 +1,251 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Nunito;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #333;
+}
+
+body.light {
+    background-color: #f5f5f5;
+}
+
+.container {
+    position: relative;
+    min-width: 300px;
+    min-height: 400px;
+    background-color: #333;
+    padding: 40px 30px 30px;
+    box-shadow: 25px 25px 75px rgba(0, 0, 0, 0.25), 10px 10px 70px rgba(0, 0, 0, 0.25), inset -5px -5px 15px rgba(0, 0, 0, 0.5), inset 5px 5px 15px rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+}
+
+body.light .container {
+    background-color: #f5f5f5;
+    box-shadow: 25px 25px 75px rgba(0, 0, 0, 0.15), 10px 10px 70px rgba(0, 0, 0, 0.15), inset -5px -5px 15px rgba(0, 0, 0, 0.15), inset 5px 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.calculator {
+    position: relative;
+    display: grid;
+}
+
+.calculator .value {
+    position: relative;
+    grid-column: span 4;
+    height: 100px;
+    width: calc(100% - 22px);
+    margin-bottom: 10px;
+    left: 10px;
+    border: none;
+    outline: none;
+    background-color: #a8ad7e;
+    border-radius: 10px;
+    text-align: right;
+    padding: 10px;
+    font-size: 2em;
+    box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.75);
+}
+
+.calculator button {
+    position: relative;
+    display: grid;
+    color: #f5f5f5;
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(180deg,#2f2f2f,#3f3f3f);
+    box-shadow: inset -8px 0 8px rgba(0, 0, 0, 0.15), inset 0 0 0 2px rgba(0, 0, 0, 0.75), 10px 10px 25px rgba(0, 0, 0, 0.4);
+    margin: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 400;
+    user-select: none;
+    border-radius: 10px;
+    place-items: center;
+}
+
+.calculator span {
+    position: relative;
+    display: grid;
+    color: #f5f5f5;
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(180deg,#2f2f2f,#3f3f3f);
+    box-shadow: inset -8px 0 8px rgba(0, 0, 0, 0.15), inset 0 0 0 2px rgba(0, 0, 0, 0.75), 10px 10px 25px rgba(0, 0, 0, 0.4);
+    margin: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 400;
+    user-select: none;
+    border-radius: 10px;
+    place-items: center;
+}
+
+body.light .calculator span {
+    color: black;
+}
+
+body.light .calculator button.clear {
+    color: #f5f5f5;
+}
+
+body.light .calculator span.equal {
+    color: #f5f5f5;
+}
+
+body.light .calculator button {
+    background: linear-gradient(180deg,#f5f5f5,#f8f8f8);
+    box-shadow: inset -8px 0 8px rgba(0, 0, 0, 0.15), inset 0 0 0 2px rgba(0, 0, 0, 0.15), 10px 10px 25px rgba(0, 0, 0, 0.25);
+}
+
+body.light .calculator span {
+    background: linear-gradient(180deg,#f5f5f5,#f8f8f8);
+    box-shadow: inset -8px 0 8px rgba(0, 0, 0, 0.15), inset 0 0 0 2px rgba(0, 0, 0, 0.15), 10px 10px 25px rgba(0, 0, 0, 0.25);
+}
+
+.calculator button::before {
+    content: '';
+    position: absolute;
+    top: 3px;
+    left: 4px;
+    bottom: 14px;
+    right: 12px;
+    background: linear-gradient(90deg,#2d2d2d,#4d4d4d);
+    border-radius: 10px;
+    box-shadow: -5px -5px 10px rgba(0, 0, 0, 0.1), 10px 5px 10px rgba(0, 0, 0, 0.15);
+    border-left: 1px solid #0004;
+    border-bottom: 1px solid #004;
+    border-top: 1px solid #0009;
+}
+
+.calculator span::before {
+    content: '';
+    position: absolute;
+    top: 3px;
+    left: 4px;
+    bottom: 14px;
+    right: 12px;
+    background: linear-gradient(90deg,#2d2d2d,#4d4d4d);
+    border-radius: 10px;
+    box-shadow: -5px -5px 10px rgba(0, 0, 0, 0.1), 10px 5px 10px rgba(0, 0, 0, 0.15);
+    border-left: 1px solid #0004;
+    border-bottom: 1px solid #004;
+    border-top: 1px solid #0009;
+}
+
+body.light .calculator .clear::before {
+    background: linear-gradient(90deg,#e6e6e6,#efefef);
+    box-shadow: -5px -5px 10px rgba(0, 0, 0, 0.25), 10px 5px 10px rgba(0, 0, 0, 0.15);
+    border-left: 1px solid #fff4;
+    border-bottom: 1px solid #fff4;
+    border-top: 1px solid #fff4;
+}
+
+body.light .calculator span::before {
+    background: linear-gradient(90deg,#e6e6e6,#efefef);
+    box-shadow: -5px -5px 10px rgba(0, 0, 0, 0.25), 10px 5px 10px rgba(0, 0, 0, 0.15);
+    border-left: 1px solid #fff4;
+    border-bottom: 1px solid #fff4;
+    border-top: 1px solid #fff4;
+}
+
+.calculator span:active , .calculator button:active {
+    filter: brightness(0.9);
+}
+
+body.light .calculator span:active {
+    filter: brightness(1.5);
+}
+
+.calculator button i {
+    position: relative;
+    font-style: normal;
+    font-size: 1.5em;
+    text-transform: uppercase;
+}
+
+.calculator span i {
+    position: relative;
+    font-style: normal;
+    font-size: 1.5em;
+    text-transform: uppercase;
+}
+
+.calculator .clear, body.light .calculator .clear {
+    grid-column: span 2;
+    width: 180px;
+    background: #f00;
+}
+
+.calculator .clear::before, body.light .calculator .clear::before {
+    background: linear-gradient(90deg, #d20000, #ffffff5c);
+    border-left: 1px solid #fff4;
+    border-bottom: 1px solid #fff4;
+    border-top: 1px solid #fff4;
+}
+
+.calculator .plus {
+    grid-row: span 2;
+    height: 180px;
+}
+
+.calculator .equal, body.light .calculator .equal {
+    background: #2196f3;
+}
+
+.calculator .equal::before, body.light .calculator .equal::before {
+    background: linear-gradient(90deg, #1479c9, #ffffff5c);
+    border-left: 1px solid #fff4;
+    border-bottom: 1px solid #fff4;
+    border-top: 1px solid #fff4;
+}
+
+.btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background: #333;
+    border-radius: 10px;
+    font-size: 1.5em;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.25), 5px 5px 30px rgba(0, 0, 0, 0.25),
+    inset -2px -2px 5px rgba(0, 0, 0, 0.25), inset 2px 2px 5px rgba(0, 0, 0, 0.25);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+body.light .btn {
+    background-color: #f5f5f5;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1), 5px 5px 30px rgba(0, 0, 0, 0.05),
+    inset -2px -2px 5px rgba(0, 0, 0, 0.1), inset 2px 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.btn strong {
+    display: none;
+}
+
+.btn strong:nth-child(1) {
+    display: block;
+}
+
+body.light .btn strong:nth-child(1) {
+    display: none;
+}
+
+body.light .btn strong:nth-child(2) {
+    display: block;
+}
+
+
+
+
