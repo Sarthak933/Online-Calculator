@@ -1,1 +1,2 @@
 # Online-Calculator
+A simple basic calculator made using HTML/CSS and a little bit of JavaScript for quick calculations which can be used in both light and dark modes. One can use this basic calculator for math with addition, subtraction, multiplication and division. The user can also toggle between the two previously mentioned modes by clicking on the mode-button provided in the top right corner.
